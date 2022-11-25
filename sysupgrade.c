@@ -102,6 +102,8 @@ void sysupgrade_exec_upgraded(const char *prefix, char *path,
 		free(name);
 	}
 
+	errno = 0;
+
 	execvp(argv[0], argv);
 
 	/* Cleanup on failure */
